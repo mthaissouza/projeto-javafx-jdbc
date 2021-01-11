@@ -28,7 +28,7 @@ public class DepartmentListController implements Initializable{
 	private TableColumn<Department, Integer> tableColumnId;
 	
 	@FXML
-	private TableColumn<Department, String> tableColumnNome;
+	private TableColumn<Department, String> tableColumnName;
 	
 	@FXML
 	private Button btNew;
@@ -51,7 +51,7 @@ public class DepartmentListController implements Initializable{
 	
 	private void initializeNodes() {
 		tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
-		tableColumnNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+		tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
 		
 		Stage stage = (Stage) Main.getMainScene().getWindow();
 		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty());
